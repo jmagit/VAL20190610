@@ -114,3 +114,60 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.ui 2 2 2019-06-10 12:48:31.978
 !MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 13:17:20.583
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.NYTlqgeh
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 13:17:20.583
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.NYTlqgeh
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 13:17:20.584
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 13:17:20.584
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.NYTlqgeh => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 13:17:31.076
+!MESSAGE Boot LS startup time from start to initialized: 2333ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 13:17:31.096
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.YbOWJVmE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 13:17:31.097
+!MESSAGE subscribing to classpath changes: sts4.classpath.YbOWJVmE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 13:17:31.098
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 13:17:31.098
+!MESSAGE subsribers = [sts4.classpath.YbOWJVmE]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 13:17:31.099
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 13:17:31.100
+!MESSAGE project demo ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 13:17:31.101
+!MESSAGE Preparing classpath changed notification demo
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 13:17:31.101
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 13:17:31.102
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 13:17:31.103
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.YbOWJVmE => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 13:17:31.107
+!MESSAGE classpath=104 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 13:17:31.107
+!MESSAGE executing callback sts4.classpath.YbOWJVmE demo false 104
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 13:17:31.139
+!MESSAGE executing callback sts4.classpath.YbOWJVmE SUCCESS [done]
+
+!ENTRY org.eclipse.jface.text 2 0 2019-06-10 13:17:42.862
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
