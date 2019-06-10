@@ -1,0 +1,116 @@
+!SESSION 2019-06-10 10:48:04.203 -----------------------------------------------
+eclipse.buildId=4.11.0.I20190307-0500
+java.version=1.8.0_211
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -data D:\Cursos\Java\VAL20190610 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.core 1 0 2019-06-10 10:48:09.059
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.jface 2 0 2019-06-10 10:48:10.484
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-06-10 10:48:10.484
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@463a1f47,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@23ade612,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.jface.text 2 0 2019-06-10 10:48:14.429
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-06-10 10:48:25.633
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\javie'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2019-06-10 11:13:36.067
+!MESSAGE No repository found at https://download.eclipse.org/m2e-wtp/releases/signed/mavenarchiver/0.17.3/.
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 12:38:11.747
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 12:38:11.749
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@5e96bb35[org.springframework.tooling.boot.ls:1.7.0.201905231938(id=1042)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 12:38:11.757
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 12:38:11.831
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 12:38:14.392
+!MESSAGE Boot LS startup time from start to initialized: 2610ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 12:38:14.442
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.NYTlqgeh
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 12:38:14.442
+!MESSAGE subscribing to classpath changes: sts4.classpath.NYTlqgeh
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 12:38:14.447
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 12:38:14.449
+!MESSAGE subsribers = [sts4.classpath.NYTlqgeh]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 12:38:14.450
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 12:38:15.755
+!MESSAGE project demo ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 12:38:15.757
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 12:38:15.757
+!MESSAGE Preparing classpath changed notification demo
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 12:38:15.757
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.NYTlqgeh => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 12:38:15.757
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 12:38:15.767
+!MESSAGE classpath=100 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 12:38:15.767
+!MESSAGE executing callback sts4.classpath.NYTlqgeh demo false 100
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 12:38:15.804
+!MESSAGE executing callback sts4.classpath.NYTlqgeh SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 12:41:25.359
+!MESSAGE Preparing classpath changed notification demo
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 12:41:25.359
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 12:41:25.384
+!MESSAGE classpath=104 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 12:41:25.384
+!MESSAGE executing callback sts4.classpath.NYTlqgeh demo false 104
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-10 12:41:25.398
+!MESSAGE executing callback sts4.classpath.NYTlqgeh SUCCESS [done]
+
+!ENTRY org.eclipse.ui 2 2 2019-06-10 12:48:31.978
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
