@@ -46,8 +46,10 @@ public class DemoApplication implements CommandLineRunner {
 //		System.out.println(linea);
 //		System.out.println(cad);
 //		miServicio.saluda();
-		dao.findAll()
-			.forEach(item -> System.out.println(item));
+//		dao.findByCityStartingWith("a")
+//			.forEach(item -> System.out.println(item));
+		dao.findByCityCode(5)
+		.forEach(item -> System.out.println(item));
 	}
 
 }
