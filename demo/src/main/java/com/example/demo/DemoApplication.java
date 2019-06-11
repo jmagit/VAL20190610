@@ -7,6 +7,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.example.demo.infraestructure.repositories.CityRepository;
 import com.example.demo.ioc.Linea;
 import com.example.demo.ioc.Punto;
 import com.example.demo.ioc.Servicio;
@@ -25,22 +26,28 @@ public class DemoApplication implements CommandLineRunner {
 //	@Qualifier("3D")
 //	private Punto p2;
 	
-	@Autowired
-	private Linea linea;
+//	@Autowired
+//	private Linea linea;
+//	
+//	@Value("${mi.propiedad}")
+//	private String cad;
+//	
+//	@Autowired
+//	private Servicio miServicio;
 	
-	@Value("${mi.propiedad}")
-	private String cad;
-	
 	@Autowired
-	private Servicio miServicio;
+	private CityRepository dao;
+	
 	@Override
 	public void run(String... args) throws Exception {
 //		System.out.println(p1.toString());
 //		p1.setX(100);
 //		System.out.println(p2);
-		System.out.println(linea);
-		System.out.println(cad);
-		miServicio.saluda();
+//		System.out.println(linea);
+//		System.out.println(cad);
+//		miServicio.saluda();
+		dao.findAll()
+			.forEach(item -> System.out.println(item));
 	}
 
 }
