@@ -13,4 +13,6 @@ public interface CityRepository extends JpaRepository<City, Integer> {
 	@Query("from City where cityId < ?1")
 	List<City> findByCityCode(int limite);
 	
+	<T> List<T> findByCityIdNotNull(Class<T> type);
+	
 }

@@ -10,6 +10,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.example.demo.application.dtos.CityEditDTO;
+import com.example.demo.application.dtos.CityShortDTO;
 import com.example.demo.domains.entities.City;
 import com.example.demo.infraestructure.repositories.CityRepository;
 import com.example.demo.ioc.Linea;
@@ -54,15 +55,18 @@ public class DemoApplication implements CommandLineRunner {
 //			.forEach(item -> System.out.println(item));
 //		dao.findByCityCode(5)
 //			.forEach(item -> System.out.println(item));
-		dao.findByCityCode(5).stream()
-			.map(item -> CityEditDTO.from(item))
-			.forEach(item -> System.out.println(item));
-		Optional<City> r = dao.findById(777);
-		if(r.isPresent()) {
-			System.out.println(CityEditDTO.from(r.get()).getCountryId());
-		} else {
-			System.out.println("No encontrado");
-		}
+//		dao.findByCityCode(5).stream()
+//			.map(item -> CityEditDTO.from(item))
+//			.forEach(item -> System.out.println(item));
+//		Optional<City> r = dao.findById(777);
+//		if(r.isPresent()) {
+//			System.out.println(CityEditDTO.from(r.get()).getCountryId());
+//		} else {
+//			System.out.println("No encontrado");
+//		}
+		dao.findByCityIdNotNull(CityShortDTO.class)
+			.forEach(item -> System.out.println(item.getCityId() + " " + item.getCity()));
+		
 	}
 
 }
