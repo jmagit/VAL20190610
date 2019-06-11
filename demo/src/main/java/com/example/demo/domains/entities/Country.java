@@ -2,6 +2,9 @@ package com.example.demo.domains.entities;
 
 import java.io.Serializable;
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+
 import java.sql.Timestamp;
 import java.util.List;
 
@@ -19,6 +22,8 @@ public class Country implements Serializable {
 	@Column(name="country_id")
 	private int countryId;
 
+	@NotBlank
+	@Size(max = 50)
 	private String country;
 
 	@Column(name="last_update")
