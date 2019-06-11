@@ -2,6 +2,8 @@ package com.example.demo;
 
 import java.util.Optional;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -11,6 +13,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.example.demo.application.dtos.CityEditDTO;
 import com.example.demo.application.dtos.CityShortDTO;
+import com.example.demo.domains.contracs.CityService;
 import com.example.demo.domains.entities.City;
 import com.example.demo.infraestructure.repositories.CityRepository;
 import com.example.demo.ioc.Linea;
@@ -40,9 +43,13 @@ public class DemoApplication implements CommandLineRunner {
 //	@Autowired
 //	private Servicio miServicio;
 	
-	@Autowired
-	private CityRepository dao;
+//	@Autowired
+//	private CityRepository dao;
 	
+	@Autowired
+	private CityService srv;
+	
+	@Transactional
 	@Override
 	public void run(String... args) throws Exception {
 //		System.out.println(p1.toString());
@@ -64,9 +71,18 @@ public class DemoApplication implements CommandLineRunner {
 //		} else {
 //			System.out.println("No encontrado");
 //		}
-		dao.findByCityIdNotNull(CityShortDTO.class)
-			.forEach(item -> System.out.println(item.getCityId() + " " + item.getCity()));
-		
+//		dao.findByCityIdNotNull(CityShortDTO.class)
+//			.forEach(item -> System.out.println(item.getCityId() + " " + item.getCity()));
+//		City c = CityEditDTO.from(new CityEditDTO(7780, "valencia", 87));
+//		if(srv.isNotValid(c))
+//			System.out.println("Invalido");
+//		else
+//			srv.change(c);
+//		srv.delete(7778);
+//		srv.delete(7779);
+//		srv.getAll().forEach(item -> System.out.println(item));
+		City c = srv.get(1);
+		c.getAddresses().forEach(item -> System.out.println(item));
 	}
 
 }

@@ -184,4 +184,10 @@ public class Address implements Serializable {
 		return store;
 	}
 
+	@Override
+	public String toString() {
+		return "Address [addressId=" + addressId + ", address=" + address + ", district=" + district + ", phone="
+				+ phone + ", postalCode=" + postalCode + "]";
+	}
+
 }
