@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 import com.example.demo.application.dtos.CityEditDTO;
 import com.example.demo.application.dtos.CityShortDTO;
@@ -46,8 +47,8 @@ public class DemoApplication implements CommandLineRunner {
 //	@Autowired
 //	private CityRepository dao;
 	
-	@Autowired
-	private CityService srv;
+//	@Autowired
+//	private CityService srv;
 	
 	@Transactional
 	@Override
@@ -81,8 +82,8 @@ public class DemoApplication implements CommandLineRunner {
 //		srv.delete(7778);
 //		srv.delete(7779);
 //		srv.getAll().forEach(item -> System.out.println(item));
-		City c = srv.get(1);
-		c.getAddresses().forEach(item -> System.out.println(item));
+//		City c = srv.get(1);
+//		c.getAddresses().forEach(item -> System.out.println(item));
 	}
 
 }

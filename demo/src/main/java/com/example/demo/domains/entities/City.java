@@ -5,6 +5,9 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.sql.Timestamp;
 import java.util.List;
 
@@ -27,10 +30,12 @@ public class City implements Serializable {
 	private String city;
 
 	@Column(name="last_update")
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy hh:mm:ss")
 	private Timestamp lastUpdate;
 
 	//bi-directional many-to-one association to Address
 	@OneToMany(mappedBy="city")
+	@JsonIgnore
 	private List<Address> addresses;
 
 	//bi-directional many-to-one association to Country
