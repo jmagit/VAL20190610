@@ -21,6 +21,9 @@ import com.example.demo.ioc.Linea;
 import com.example.demo.ioc.Punto;
 import com.example.demo.ioc.Servicio;
 
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
+@EnableSwagger2
 @SpringBootApplication
 public class DemoApplication implements CommandLineRunner {
 

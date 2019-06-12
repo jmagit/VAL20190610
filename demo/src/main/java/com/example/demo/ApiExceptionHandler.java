@@ -23,7 +23,9 @@ public class ApiExceptionHandler {
     }
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    @ExceptionHandler({ BadRequestException.class, InvalidDataException.class
+    @ExceptionHandler({ BadRequestException.class, 
+    	InvalidDataException.class,
+    	org.springframework.web.HttpRequestMethodNotSupportedException.class
 	})
     @ResponseBody
     public ErrorMessage badRequest(Exception exception) {
