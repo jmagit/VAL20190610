@@ -13,16 +13,28 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 
 @Configuration
-public class AppConfig implements WebMvcConfigurer {
-    @Override
-    public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**")
-            .allowedOrigins("*")
-            .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-            .allowedHeaders("origin", "content-type", "accept", "authorization")
-            .allowCredentials(true)
-            .maxAge(3600);
-    }
+public class AppConfig { //implements WebMvcConfigurer {
+	@Bean
+	public WebMvcConfigurer corsConfigurer() {
+		return new WebMvcConfigurer() {
+			@Override
+			public void addCorsMappings(CorsRegistry registry) {
+				registry.addMapping("/**").allowedOrigins("*")
+            .allowedMethods("GET", "POST", "PUT", "DELETE")
+            .allowedHeaders("origin", "content-type", "accept", "authorization");
+			}
+		};
+	}
+
+//    @Override
+//    public void addCorsMappings(CorsRegistry registry) {
+//        registry.addMapping("/**")
+//            .allowedOrigins("*")
+//            .allowedMethods("GET", "POST", "PUT", "DELETE")
+//            .allowedHeaders("origin", "content-type", "accept", "authorization")
+//            .allowCredentials(true)
+//            .maxAge(3600);
+//    }
 
 	@Bean
 	public Docket api() {                

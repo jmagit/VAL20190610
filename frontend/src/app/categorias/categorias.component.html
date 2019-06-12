@@ -1,0 +1,12 @@
+<h1>
+  Categorias
+</h1>
+
+<div>
+    <input *ngFor="let item of listado" type="button" value="{{item.name}}" (click)="selecciona(item.categoryId)">
+</div>
+<ul>
+  <li *ngFor="let item of peliculas">
+    {{item.title}}
+  </li>
+</ul>

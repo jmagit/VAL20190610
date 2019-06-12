@@ -5,6 +5,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -35,7 +36,7 @@ public class Country implements Serializable {
 
 	//bi-directional many-to-one association to City
 	@OneToMany(mappedBy="country")
-	@JsonIgnore
+	@JsonBackReference
 	private List<City> cities;
 
 	public Country() {
