@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import java.util.List;
 import java.util.Optional;
 
 import javax.transaction.Transactional;
@@ -10,10 +11,19 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.client.RestTemplate;
 
+import com.example.demo.application.dtos.ActorDTO;
+import com.example.demo.application.dtos.ActorShortDTO;
 import com.example.demo.application.dtos.CityEditDTO;
 import com.example.demo.application.dtos.CityShortDTO;
+import com.example.demo.application.proxies.ActorProxy;
 import com.example.demo.domains.contracs.CityService;
 import com.example.demo.domains.entities.City;
 import com.example.demo.infraestructure.repositories.CityRepository;
@@ -24,6 +34,7 @@ import com.example.demo.ioc.Servicio;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @EnableSwagger2
+@EnableFeignClients("com.example.demo.application.proxies")
 @SpringBootApplication
 public class DemoApplication implements CommandLineRunner {
 
@@ -52,6 +63,12 @@ public class DemoApplication implements CommandLineRunner {
 	
 //	@Autowired
 //	private CityService srv;
+	
+//	@Autowired
+//	private RestTemplate rest;
+	
+	@Autowired
+	private ActorProxy proxy;
 	
 	@Transactional
 	@Override
@@ -87,6 +104,20 @@ public class DemoApplication implements CommandLineRunner {
 //		srv.getAll().forEach(item -> System.out.println(item));
 //		City c = srv.get(1);
 //		c.getAddresses().forEach(item -> System.out.println(item));
+//		ActorDTO a = rest.getForObject("http://localhost:8002/actores/{id}", ActorDTO.class, 1);
+//		System.out.println(a);
+//		ResponseEntity<List<ActorShortDTO>> response = rest.exchange(
+//				"http://localhost:8002/actores/lista", 
+//				HttpMethod.GET,
+//				HttpEntity.EMPTY, 
+//				new ParameterizedTypeReference<List<ActorShortDTO>>() {
+//				});
+//		List<ActorShortDTO> rsltActorDTOs = response.getBody();
+//		rsltActorDTOs.forEach(item -> System.out.println(item));
+		ActorDTO a = proxy.getOne(1);
+		System.out.println(a);
+		proxy.getAll().forEach(item -> System.out.println(item));
+
 	}
 
 }
